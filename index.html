@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      @keyframes blink-a {
+        0% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        10% {
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-d {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        60% {
+          opacity: 0;
+        }
+        62% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-c {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.1;
+        }
+        35% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 0;
+        }
+        45% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-b {
+        0% {
+          opacity: 0;
+        }
+        45% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-e {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-f {
+        0% {
+          opacity: 0;
+        }
+        35% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes blink-g {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        35% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.9;
+        }
+      }
+      @font-face {
+        font-family: NeonTube;
+        src: url('BeonMedium-6d51.otf');
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(12, 14, 13, 1);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+      }
+      body::after {
+        content: "";
+        background: url(image2.jpg);
+        background-size: cover;
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+      .letters,
+      .letters-reflection {
+        perspective: 170px;
+        display: flex;
+        justify-content: center;
+      }
+      .letters {
+        transform: scale(0.6) translateY(100px);
+      }
+      .letters-reflection {
+        transform: rotateX(180deg);
+        filter: blur(24px);
+      }
+      .letters-reflection .letter {
+         transform: rotateX(-45deg);
+      }
+      .letter {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: NeonTube;
+        font-size: 300px;
+        color: rgba(250, 250, 255, 1);
+        line-height: 300px;
+        text-align: center;
+      }
+      .letter-silhouette {
+        margin-bottom: -300px;
+        transform: scale(0.95, 0.95);
+        color: rgba(50, 150, 255, 0.3);
+        filter: blur(5px);
+      }
+      .letter-blur {
+        filter: blur(40px);
+        color: rgba(50, 150, 255, 1);
+        transform: scale(1.2, 1.2);
+        opacity: 1;
+        margin-bottom: -300px;
+      }
+      .letter-main {
+        color: rgba(250, 250, 255, 1);
+        transform: scale(1, 1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      .letter.a .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(30px, 20px);
+      }
+      .letter.b .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(20px, 20px);
+      }
+      .letter.c .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(10px, 20px);
+      }
+      .letter.d .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(-5px, 20px);
+      }
+      .letter.e .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(-10px, 20px);
+      }
+      .letter.f .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(-20px, 20px);
+      }
+      .letter.g .letter-silhouette {
+        transform: scale(0.95, 0.85) translate(-30px, 20px);
+      }
+      .letter.a {
+        animation: forwards blink-a 1s;
+      }
+      .letter.b {
+        animation: forwards blink-b 1s;
+      }
+      .letter.c {
+        animation: forwards blink-c 1s;
+      }
+      .letter.d {
+        animation: forwards blink-d 1s;
+      }
+      .letter.e {
+        animation: forwards blink-e 1s;
+      }
+      .letter.f {
+        animation: forwards blink-f 1s;
+      }
+      .letter.g {
+        animation: forwards blink-g 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letters">
+      <div class="letter a">
+        <div class="letter-blur">D</div>
+        <div class="letter-silhouette">D</div>
+        <div class="letter-main">D</div>
+      </div>
+      <div class="letter b">
+        <div class="letter-blur">E</div>
+        <div class="letter-silhouette">E</div>
+        <div class="letter-main">E</div>
+      </div>
+      <div class="letter c">
+        <div class="letter-blur">E</div>
+        <div class="letter-silhouette">E</div>
+        <div class="letter-main">E</div>
+      </div>
+      <div class="letter d">
+        <div class="letter-blur">J</div>
+        <div class="letter-silhouette">J</div>
+        <div class="letter-main">J</div>
+      </div>
+      <div class="letter e">
+        <div class="letter-blur">A</div>
+        <div class="letter-silhouette">A</div>
+        <div class="letter-main">A</div>
+      </div>
+      <div class="letter f">
+        <div class="letter-blur">Y</div>
+        <div class="letter-silhouette">Y</div>
+        <div class="letter-main">Y</div>
+      </div>
+      <div class="letter g">
+        <div class="letter-blur">Y</div>
+        <div class="letter-silhouette">Y</div>
+        <div class="letter-main">Y</div>
+      </div>
+    </div>
+    <div class="letters-reflection">
+      <div class="letter a">
+        <div class="letter-blur">D</div>
+        <div class="letter-silhouette">D</div>
+        <div class="letter-main">D</div>
+      </div>
+      <div class="letter b">
+        <div class="letter-blur">E</div>
+        <div class="letter-silhouette">E</div>
+        <div class="letter-main">E</div>
+      </div>
+      <div class="letter c">
+        <div class="letter-blur">E</div>
+        <div class="letter-silhouette">E</div>
+        <div class="letter-main">E</div>
+      </div>
+      <div class="letter d">
+        <div class="letter-blur">J</div>
+        <div class="letter-silhouette">J</div>
+        <div class="letter-main">J</div>
+      </div>
+      <div class="letter e">
+        <div class="letter-blur">A</div>
+        <div class="letter-silhouette">A</div>
+        <div class="letter-main">A</div>
+      </div>
+      <div class="letter f">
+        <div class="letter-blur">Y</div>
+        <div class="letter-silhouette">Y</div>
+        <div class="letter-main">Y</div>
+      </div>
+      <div class="letter g">
+        <div class="letter-blur">Y</div>
+        <div class="letter-silhouette">Y</div>
+        <div class="letter-main">Y</div>
+      </div>
+    </div>
+  </body>
+</html>
