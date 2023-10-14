@@ -129,6 +129,7 @@
         padding: 0;
         position: relative;
         overflow: hidden;
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       }
       body::after {
         content: "";
@@ -142,8 +143,13 @@
         position: absolute;
         z-index: -1;
       }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       .letters,
-      .letters-reflection, .floor {
+      .letters-reflection,
+      .floor {
         perspective: 170px;
         display: flex;
         justify-content: center;
@@ -237,9 +243,50 @@
       .letter.g {
         animation: forwards blink-g 1s;
       }
+      .contact {
+        color: white;
+        display: flex;
+        column-gap: 32px;
+        row-gap: 16px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding: 40px 20px 0;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     </style>
   </head>
   <body>
+    <div class="contact">
+      <div>
+        <a href="https://github.com/deejayy" target="_blank" rel="nofollow"
+          >github</a
+        >
+      </div>
+      <div>
+        <a href="https://twitter.com/deejayyhu" target="_blank" rel="nofollow"
+          >twitter</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://mastodon.social/@deejayy"
+          target="_blank"
+          rel="nofollow"
+          >mastodon</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://bsky.app/profile/deejayy.hu"
+          target="_blank"
+          rel="nofollow"
+          >bluesky</a
+        >
+      </div>
+      <div>cv.co.hu</div>
+      <div>(c) 2000-2023</div>
+    </div>
     <div class="letters">
       <div class="letter a">
         <div class="letter-blur">D</div>
