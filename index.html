@@ -118,11 +118,12 @@
       }
       @font-face {
         font-family: NeonTube;
-        src: url('BeonMedium-6d51.otf');
+        src: url("BeonMedium-6d51.otf");
       }
       body {
-        width: 100vw;
-        height: 100vh;
+        cursor: default;
+        max-width: 100vw;
+        max-height: 100vh;
         background-color: rgba(12, 14, 13, 1);
         margin: 0;
         padding: 0;
@@ -142,26 +143,36 @@
         z-index: -1;
       }
       .letters,
-      .letters-reflection {
+      .letters-reflection, .floor {
         perspective: 170px;
         display: flex;
         justify-content: center;
       }
       .letters {
-        transform: scale(0.6) translateY(100px);
+        height: 30vh;
+        transform: scale(0.6) translateY(50%);
       }
       .letters-reflection {
         transform: rotateX(180deg);
-        filter: blur(24px);
       }
+      .floor {
+        overflow: hidden;
+        width: 100vw;
+        height: 50vh;
+        transform: rotateX(-45deg);
+        background-image: url(image1.jpg);
+        background-size: 50% 50%;
+      }
+
       .letters-reflection .letter {
-         transform: rotateX(-45deg);
+        filter: blur(24px);
+        transform: translateY(-30px) scaleY(0.8);
       }
       .letter {
         margin-top: auto;
         margin-bottom: auto;
         font-family: NeonTube;
-        font-size: 300px;
+        font-size: 20vw;
         color: rgba(250, 250, 255, 1);
         line-height: 300px;
         text-align: center;
@@ -267,40 +278,42 @@
       </div>
     </div>
     <div class="letters-reflection">
-      <div class="letter a">
-        <div class="letter-blur">D</div>
-        <div class="letter-silhouette">D</div>
-        <div class="letter-main">D</div>
-      </div>
-      <div class="letter b">
-        <div class="letter-blur">E</div>
-        <div class="letter-silhouette">E</div>
-        <div class="letter-main">E</div>
-      </div>
-      <div class="letter c">
-        <div class="letter-blur">E</div>
-        <div class="letter-silhouette">E</div>
-        <div class="letter-main">E</div>
-      </div>
-      <div class="letter d">
-        <div class="letter-blur">J</div>
-        <div class="letter-silhouette">J</div>
-        <div class="letter-main">J</div>
-      </div>
-      <div class="letter e">
-        <div class="letter-blur">A</div>
-        <div class="letter-silhouette">A</div>
-        <div class="letter-main">A</div>
-      </div>
-      <div class="letter f">
-        <div class="letter-blur">Y</div>
-        <div class="letter-silhouette">Y</div>
-        <div class="letter-main">Y</div>
-      </div>
-      <div class="letter g">
-        <div class="letter-blur">Y</div>
-        <div class="letter-silhouette">Y</div>
-        <div class="letter-main">Y</div>
+      <div class="floor">
+        <div class="letter a">
+          <div class="letter-blur">D</div>
+          <div class="letter-silhouette">D</div>
+          <div class="letter-main">D</div>
+        </div>
+        <div class="letter b">
+          <div class="letter-blur">E</div>
+          <div class="letter-silhouette">E</div>
+          <div class="letter-main">E</div>
+        </div>
+        <div class="letter c">
+          <div class="letter-blur">E</div>
+          <div class="letter-silhouette">E</div>
+          <div class="letter-main">E</div>
+        </div>
+        <div class="letter d">
+          <div class="letter-blur">J</div>
+          <div class="letter-silhouette">J</div>
+          <div class="letter-main">J</div>
+        </div>
+        <div class="letter e">
+          <div class="letter-blur">A</div>
+          <div class="letter-silhouette">A</div>
+          <div class="letter-main">A</div>
+        </div>
+        <div class="letter f">
+          <div class="letter-blur">Y</div>
+          <div class="letter-silhouette">Y</div>
+          <div class="letter-main">Y</div>
+        </div>
+        <div class="letter g">
+          <div class="letter-blur">Y</div>
+          <div class="letter-silhouette">Y</div>
+          <div class="letter-main">Y</div>
+        </div>
       </div>
     </div>
   </body>
